@@ -25,23 +25,34 @@
   </header>
   <main class="container">
     <div class="row">
-      <div class="col-12 d-flex justify-content-center">
+      <div class="col-12 d-flex justify-content-center border border-dark">
         <form onsubmit="app.cardsController.createCard()" class=" d-flex flex-row">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" name="name" placeholder="MakeList">
             <label for="name">Create New List </label>
           </div>
           <!-- Select Color for List -->
-          <input type="color" class="form-control form-control-color mx-1" name="color" value="#563d7c"
-            title="Choose your color">
-      </div>
 
-      <div>
-        <button class="btn btn-secondary" type="submit">Create</button>
-      </div>
+          <div class="d-flex flex-column">
+            <label for="exampleColorInput" class="form-label">Blue</label>
+            <input type="radio" class="form-control" name="color" value="primary" title="Choose your color">
+            <label for="exampleColorInput" class="form-label">Grey</label>
+            <input type="radio" class="form-control" name="color" value="secondary" title="Choose your color">
+          </div>
+          <div class="d-flex flex-column">
+            <label for="exampleColorInput" class="form-label">Green</label>
+            <input type="radio" class="form-control" name="color" value="success" title="Choose your color">
+            <label for="exampleColorInput" class="form-label">Red</label>
+            <input type="radio" class="form-control" name="color" value="danger" title="Choose your color">
+          </div>
 
-      </form>
-    </div>
+          <div>
+            <button class="btn btn-secondary" type="submit">Create</button>
+          </div>
+
+
+        </form>
+      </div>
     </div>
     <div class="row" id="cards">
       <!-- Template for List Cards -->

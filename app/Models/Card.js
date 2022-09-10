@@ -17,7 +17,7 @@ export class Card {
     return /*html*/`
   <div class="col-4">
     <div class="card">
-      <div class="card-body ">
+      <div class="card-body bg-${this.color}">
         <h5 class="card-title">${this.name}</h5>
       </div>
       <ul class="list-group list-group-flush">
