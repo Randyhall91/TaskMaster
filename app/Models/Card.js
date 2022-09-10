@@ -1,6 +1,6 @@
 import { appState } from "../AppState.js"
 import { generateId } from "../Utils/generateId.js"
-
+import { Item } from "./Item.js"
 
 
 
@@ -19,6 +19,7 @@ export class Card {
     <div class="card">
       <div class="card-body bg-${this.color}">
         <h5 class="card-title">${this.name}</h5>
+        <p>Completed: ${this.totalChecked}/${this.totalItems}</p>
       </div>
       <ul class="list-group list-group-flush">
       ${this.Items}
@@ -49,5 +50,34 @@ export class Card {
     items.forEach(i => template += i.Template)
     return template
   }
+
+  get totalItems() {
+    let items = appState.items.filter(i => i.cardId == this.id)
+    console.log(items);
+    let total = items.length
+
+    console.log(total, 'total');
+
+    return total
+  }
+  get totalChecked() {
+    let items = appState.items.filter(i => i.cardId == this.id)
+    let total = 0
+
+    items.forEach(item => {
+      if (item.checked == true) {
+        total++
+
+        console.log(total, 'checked');
+      }
+
+    })
+
+    return total
+
+
+  }
+
+
 
 }

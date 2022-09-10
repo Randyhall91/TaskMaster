@@ -19,7 +19,7 @@ export class ItemsController {
 
   createItem(cardId) {
     try {
-      console.log('create Item');
+      // console.log('create Item');
       // @ts-ignore
       window.event.preventDefault()
       // @ts-ignore
@@ -38,13 +38,18 @@ export class ItemsController {
   }
   deleteItem(itemId) {
     try {
-      console.log('deleteItem');
+      // console.log('deleteItem');
       itemService.deleteItem(itemId)
 
 
     } catch (error) {
       console.log('error dellist');
     }
+  }
+
+  isChecked(id, cardId) {
+    itemService.isChecked(id, cardId)
+
   }
 
 
