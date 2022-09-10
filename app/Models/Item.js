@@ -17,7 +17,7 @@ export class Item {
     return/*html*/`
     <li class="list-group-item d-flex align-items-baseline crime-border">
       <div class="me-auto">
-        <input class="form-check-input me-auto" type="checkbox" onchange="app.itemsController.isChecked('${this.id}', '${this.cardId}')" ${this.checked ? 'checked' : ''}>
+        <input class="form-check-input me-auto" type="checkbox" onchange="app.itemsController.isChecked('${this.id}')" ${this.checked ? 'checked' : ''}>
         ${this.description}
       </div>
       <i class="mdi mdi-close text-danger" onclick="app.itemsController.deleteItem('${this.id}')"></i>

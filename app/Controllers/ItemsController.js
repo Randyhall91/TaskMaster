@@ -47,8 +47,8 @@ export class ItemsController {
     }
   }
 
-  isChecked(id, cardId) {
-    itemService.isChecked(id, cardId)
+  isChecked(id) {
+    itemService.isChecked(id)
 
   }
 

@@ -5,9 +5,15 @@ import { saveState } from "../Utils/Store.js"
 
 class CardsService {
   deleteCard(cardId) {
-    let cards = appState.cards.filter(c => c.id != cardId)
-    appState.cards = cards
-    saveState('cards', appState.cards)
+
+    if (confirm('Are you sure you want to delet this List?') == true) {
+      let cards = appState.cards.filter(c => c.id != cardId)
+      appState.cards = cards
+      saveState('cards', appState.cards)
+
+    } else {
+      return
+    }
   }
 
 

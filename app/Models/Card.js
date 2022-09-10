@@ -17,7 +17,7 @@ export class Card {
     return /*html*/`
   <div class="col-4">
     <div class="card">
-      <div class="card-body bg-${this.color}">
+      <div class="card-body text-bg-${this.color}">
         <h5 class="card-title">${this.name}</h5>
         <p>Completed: ${this.totalChecked}/${this.totalItems}</p>
       </div>
@@ -28,7 +28,7 @@ export class Card {
       <div class="card-body ">
         <div class="d-flex flex-row">
           <form onsubmit="app.itemsController.createItem('${this.id}')">
-            <input type="text" name='description' class="form-control" id="item" placeholder="Item">
+            <input type="text" name='description' class="form-control" id="item" placeholder="Item" minlength="3" maxlength="15">
               <div class='mt-2'>
                 <button class="btn btn-primary" type="submit">New Item</button>
                 <button onclick="app.cardsController.deleteCard('${this.id}')" class="btn btn-danger ms-2">Delete List</button>
