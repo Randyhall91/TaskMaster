@@ -31,7 +31,7 @@ class ItemsService {
 
 
     } else {
-      return
+
     }
   }
 

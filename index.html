@@ -27,26 +27,59 @@
     <div class="row">
       <div class="col-12 d-flex justify-content-center border border-dark">
         <form onsubmit="app.cardsController.createCard()" class=" d-flex flex-row">
-          <div class="form-floating mb-3">
+          <div class="form-floating m-3">
             <input type="text" class="form-control" name="name" placeholder="MakeList" minlength="3" maxlength="15">
-            <label for="name">Create New List </label>
+            <label for="name">Create New List</label>
           </div>
           <!-- Select Color for List -->
 
-          <div class="d-flex flex-column">
-            <label for="exampleColorInput" class="form-label">Blue</label>
+
+          <div class="btn-group d-flex">
+            <button type="button" class="btn btn-outline-dark form-input" name="color" value="dark"
+              title="Choose your Color">Select a
+              Color</button>
+            <button type="button" class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li class="ps-1"><input class="form-check-input me-1" type="radio" name="color" id="primary"
+                  value="primary">
+                <label class="form-check-label" for="primary">Bright Blue</label>
+              </li>
+              <li class="ps-1"><input class="form-check-input me-1" type="radio" name="color" id="secondary"
+                  value="secondary">
+                <label class="form-check-label" for="secondary">1 Shade of Grey</label>
+              </li>
+              <li class="ps-1"><input class="form-check-input me-1" type="radio" name="color" id="success"
+                  value="success">
+                <label class="form-check-label" for="success">Grass Green</label>
+              </li>
+              <li class="ps-1"><input class="form-check-input me-1" type="radio" name="color" id="danger"
+                  value="danger">
+                <label class="form-check-label" for="danger">Blood Red</label>
+              </li>
+              <li class="ps-1"><input class="form-check-input me-1" type="radio" name="color" id="warning"
+                  value="warning">
+                <label class="form-check-label" for="warning">Dirty Yellow</label>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <div class="d-flex flex-column m-3">
+            <label class="form-label">Blue</label>
+
             <input type="radio" class="form-control" name="color" value="primary" title="Choose your color">
-            <label for="exampleColorInput" class="form-label">Grey</label>
+
+            <label class="form-label">Grey</label>
             <input type="radio" class="form-control" name="color" value="secondary" title="Choose your color">
-          </div>
-          <div class="d-flex flex-column">
-            <label for="exampleColorInput" class="form-label">Green</label>
+            <label class="form-label">Green</label>
             <input type="radio" class="form-control" name="color" value="success" title="Choose your color">
-            <label for="exampleColorInput" class="form-label">Red</label>
+            <label class="form-label">Red</label>
             <input type="radio" class="form-control" name="color" value="danger" title="Choose your color">
-            <label for="exampleColorInput" class="form-label">Yellow</label>
+            <label class="form-label">Yellow</label>
             <input type="radio" class="form-control" name="color" value="warning" title="Choose your color">
-          </div>
+          </div> -->
 
           <div>
             <button class="btn btn-secondary" type="submit">Create</button>

@@ -15,7 +15,7 @@ export class Card {
 
   get Template() {
     return /*html*/`
-  <div class="col-4">
+  <div class="col-4 p-3">
     <div class="card">
       <div class="card-body text-bg-${this.color}">
         <h5 class="card-title">${this.name}</h5>

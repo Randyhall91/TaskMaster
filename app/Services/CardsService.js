@@ -12,7 +12,7 @@ class CardsService {
       saveState('cards', appState.cards)
 
     } else {
-      return
+
     }
   }
 
