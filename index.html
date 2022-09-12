@@ -28,14 +28,15 @@
       <div class="col-12 d-flex justify-content-center border border-dark">
         <form onsubmit="app.cardsController.createCard()" class=" d-flex flex-row">
           <div class="form-floating m-3">
-            <input type="text" class="form-control" name="name" placeholder="MakeList" minlength="3" maxlength="15">
+            <input type="text" class="form-control" name="name" placeholder="MakeList" required minlength="3"
+              maxlength="15">
             <label for="name">Create New List</label>
           </div>
           <!-- Select Color for List -->
 
 
-          <div class="btn-group d-flex">
-            <button type="button" class="btn btn-outline-dark form-input" name="color" value="dark"
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-white form-input" name="color" value="white"
               title="Choose your Color">Select a
               Color</button>
             <button type="button" class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split"
@@ -65,23 +66,7 @@
               </li>
             </ul>
           </div>
-
-          <!-- <div class="d-flex flex-column m-3">
-            <label class="form-label">Blue</label>
-
-            <input type="radio" class="form-control" name="color" value="primary" title="Choose your color">
-
-            <label class="form-label">Grey</label>
-            <input type="radio" class="form-control" name="color" value="secondary" title="Choose your color">
-            <label class="form-label">Green</label>
-            <input type="radio" class="form-control" name="color" value="success" title="Choose your color">
-            <label class="form-label">Red</label>
-            <input type="radio" class="form-control" name="color" value="danger" title="Choose your color">
-            <label class="form-label">Yellow</label>
-            <input type="radio" class="form-control" name="color" value="warning" title="Choose your color">
-          </div> -->
-
-          <div>
+          <div class="p-2 d-flex align-content-center">
             <button class="btn btn-secondary" type="submit">Create</button>
           </div>
 
@@ -97,10 +82,6 @@
 
   </main>
 
-
-  <footer class="bg-dark text-light">
-
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

@@ -28,10 +28,10 @@ export class Card {
       <div class="card-body ">
         <div class="d-flex flex-row">
           <form onsubmit="app.itemsController.createItem('${this.id}')">
-            <input type="text" name='description' class="form-control" id="item" placeholder="Item" minlength="3" maxlength="15">
+            <input type="text" name='description' class="form-control" id="item" placeholder="Item" required minlength="3" maxlength="15">
               <div class='mt-2'>
                 <button class="btn btn-primary" type="submit">New Item</button>
-                <button onclick="app.cardsController.deleteCard('${this.id}')" class="btn btn-danger ms-2">Delete List</button>
+                <button onclick="app.cardsController.deleteCard('${this.id}')" class="btn btn-danger ms-2" type="button">Delete List</button>
               </div>
           </form>
         </div>
